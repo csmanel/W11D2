@@ -13,10 +13,12 @@ export default function ClimateProvider({ children }) {
 
   return (
     <ClimateContext.Provider
-      value={
-        ({ climateTemp, setClimateTemp },
-        { climateHumidity, setClimateHumidity })
-      }
+      value={{
+        climateTemp,
+        setClimateTemp,
+        climateHumidity,
+        setClimateHumidity,
+      }}
     >
       {children}
     </ClimateContext.Provider>

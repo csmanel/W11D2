@@ -1,9 +1,6 @@
 import ReactSlider from 'react-slider';
 import './Hygrometer.css';
-import {
-  ClimateContext,
-  useClimateContext,
-} from '../../context/ClimateContext';
+import { useClimateContext } from '../../context/ClimateContext';
 
 function Hygrometer() {
   const { climateHumidity, setClimateHumidity } = useClimateContext();
