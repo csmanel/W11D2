@@ -7,22 +7,19 @@ import ClimateStats from './ClimateStats';
 import { useTheme } from '../../context/ThemeContext';
 
 function Greenhouse() {
-  const { themeName, setThemeName } = useTheme();
+  const { themeName } = useTheme();
 
   const changeContext = () => {
     if (themeName === 'day') {
-      return dayImage
+      return dayImage;
     } else {
-      return nightImage
+      return nightImage;
     }
-  }
+  };
 
   return (
     <section>
-      <img  className='greenhouse-img'
-            src={changeContext()}
-            alt='greenhouse' 
-      />
+      <img className="greenhouse-img" src={changeContext()} alt="greenhouse" />
       <LightSwitch />
       <ClimateStats />
     </section>
